@@ -1,0 +1,273 @@
+EESchema Schematic File Version 4
+LIBS:discipline-pcb-cache
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 11900 10050 0    50   ~ 0
+DISCIPLINE // 65% keyboard with only through hole components
+Text Notes 13000 11050 0    50   ~ 0
+7/1/2019
+Text Notes 12250 10900 0    50   ~ 0
+DISCIPLINE
+Wire Wire Line
+	2150 1800 2300 1800
+Wire Wire Line
+	2450 1800 2450 2700
+Wire Wire Line
+	2450 2700 2150 2700
+NoConn ~ 2150 1900
+NoConn ~ 2150 2500
+Wire Wire Line
+	2150 2200 2550 2200
+Wire Wire Line
+	2550 2200 2550 2400
+Wire Wire Line
+	2550 2400 2150 2400
+Wire Wire Line
+	2150 2100 2550 2100
+Wire Wire Line
+	2650 2100 2650 2300
+Wire Wire Line
+	2650 2300 2150 2300
+$Comp
+L Device:R_Small R1
+U 1 1 5D059885
+P 2750 2000
+F 0 "R1" V 2650 2000 50  0000 C CNN
+F 1 "5.1k" V 2750 2000 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 2750 2000 50  0001 C CNN
+F 3 "~" H 2750 2000 50  0001 C CNN
+	1    2750 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R2
+U 1 1 5D059DB7
+P 2750 2600
+F 0 "R2" V 2850 2600 50  0000 C CNN
+F 1 "5.1k" V 2750 2600 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 2750 2600 50  0001 C CNN
+F 3 "~" H 2750 2600 50  0001 C CNN
+	1    2750 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2150 2000 2650 2000
+Wire Wire Line
+	2150 2600 2650 2600
+Wire Wire Line
+	2850 2000 2850 2600
+Connection ~ 2850 2000
+Connection ~ 2850 2600
+Wire Wire Line
+	2150 1700 2150 1800
+Wire Wire Line
+	2150 1600 2150 1500
+Wire Wire Line
+	2150 1500 2850 1500
+Wire Wire Line
+	2850 1500 2850 2000
+Wire Wire Line
+	2150 2800 2150 2700
+$Comp
+L power:GND #PWR0102
+U 1 1 5D1E1072
+P 2850 3100
+F 0 "#PWR0102" H 2850 2850 50  0001 C CNN
+F 1 "GND" H 2855 2927 50  0000 C CNN
+F 2 "" H 2850 3100 50  0001 C CNN
+F 3 "" H 2850 3100 50  0001 C CNN
+	1    2850 3100
+	1    0    0    -1  
+$EndComp
+Connection ~ 2850 3100
+Wire Wire Line
+	2850 2600 2850 3100
+$Comp
+L Device:R_Small R3
+U 1 1 5D1C25EC
+P 3200 2100
+F 0 "R3" V 3100 2100 50  0000 C CNN
+F 1 "75R" V 3200 2100 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 3200 2100 50  0001 C CNN
+F 3 "~" H 3200 2100 50  0001 C CNN
+	1    3200 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R4
+U 1 1 5D1C27D1
+P 3200 2200
+F 0 "R4" V 3300 2200 50  0000 C CNN
+F 1 "75R" V 3200 2200 39  0000 C CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 3200 2200 50  0001 C CNN
+F 3 "~" H 3200 2200 50  0001 C CNN
+	1    3200 2200
+	0    1    1    0   
+$EndComp
+Connection ~ 2650 2100
+Connection ~ 2550 2200
+Text GLabel 3300 2100 2    50   Input ~ 0
+D-
+Text GLabel 3300 2200 2    50   Input ~ 0
+D+
+$Comp
+L Device:D_Zener_Small D69
+U 1 1 5D184B7B
+P 2950 2450
+F 0 "D69" V 2850 2350 39  0000 L CNN
+F 1 "3.6V" V 2900 2550 39  0000 L CNN
+F 2 "cftkb:D_DO-35_SOD27_P5.08mm_Horizontal" V 2950 2450 50  0001 C CNN
+F 3 "~" V 2950 2450 50  0001 C CNN
+	1    2950 2450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_Zener_Small D70
+U 1 1 5D184D75
+P 3050 2450
+F 0 "D70" V 2950 2450 39  0000 L CNN
+F 1 "3.6V" V 3000 2250 39  0000 L CNN
+F 2 "cftkb:D_DO-35_SOD27_P5.08mm_Horizontal" V 3050 2450 50  0001 C CNN
+F 3 "~" V 3050 2450 50  0001 C CNN
+	1    3050 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2550 2200 3050 2200
+Wire Wire Line
+	2650 2100 2950 2100
+Wire Wire Line
+	3050 2200 3050 2350
+Connection ~ 3050 2200
+Wire Wire Line
+	3050 2200 3100 2200
+Wire Wire Line
+	2950 2100 2950 2350
+Connection ~ 2950 2100
+Wire Wire Line
+	2950 2100 3100 2100
+Wire Wire Line
+	2950 2550 3050 2550
+$Comp
+L power:GND #PWR0101
+U 1 1 5D205D44
+P 3050 2550
+F 0 "#PWR0101" H 3050 2300 50  0001 C CNN
+F 1 "GND" H 3055 2377 50  0000 C CNN
+F 2 "" H 3050 2550 50  0001 C CNN
+F 3 "" H 3050 2550 50  0001 C CNN
+	1    3050 2550
+	1    0    0    -1  
+$EndComp
+Connection ~ 3050 2550
+$Comp
+L Device:R_Small R5
+U 1 1 5D2B8CD8
+P 2550 1800
+F 0 "R5" H 2600 1950 50  0000 L CNN
+F 1 "1.5k" V 2550 1750 39  0000 L CNN
+F 2 "cftkb:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" H 2550 1800 50  0001 C CNN
+F 3 "~" H 2550 1800 50  0001 C CNN
+	1    2550 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2100 2550 1900
+Connection ~ 2550 2100
+Wire Wire Line
+	2550 2100 2650 2100
+$Comp
+L power:+5V #PWR0109
+U 1 1 5D2D4A6B
+P 2550 1650
+F 0 "#PWR0109" H 2550 1740 20  0001 C CNN
+F 1 "+5V" H 2546 1778 30  0000 C CNN
+F 2 "" H 2550 1650 60  0000 C CNN
+F 3 "" H 2550 1650 60  0000 C CNN
+	1    2550 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1700 2550 1650
+$Comp
+L power:VCC #PWR0105
+U 1 1 5D2F7246
+P 2300 1800
+F 0 "#PWR0105" H 2300 1650 50  0001 C CNN
+F 1 "VCC" H 2317 1973 50  0000 C CNN
+F 2 "" H 2300 1800 50  0001 C CNN
+F 3 "" H 2300 1800 50  0001 C CNN
+	1    2300 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 2300 1800
+Wire Wire Line
+	2300 1800 2450 1800
+$Comp
+L Device:Polyfuse_Small F1
+U 1 1 5D2F73B7
+P 2450 1350
+F 0 "F1" H 2518 1396 50  0000 L CNN
+F 1 "500mA" H 2518 1305 50  0000 L CNN
+F 2 "cftkb:polyfuse_5.1mm" H 2500 1150 50  0001 L CNN
+F 3 "~" H 2450 1350 50  0001 C CNN
+	1    2450 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 1800 2450 1450
+Connection ~ 2450 1800
+$Comp
+L power:+5V #PWR0110
+U 1 1 5D31262D
+P 2450 1250
+F 0 "#PWR0110" H 2450 1340 20  0001 C CNN
+F 1 "+5V" H 2446 1378 30  0000 C CNN
+F 2 "" H 2450 1250 60  0000 C CNN
+F 3 "" H 2450 1250 60  0000 C CNN
+	1    2450 1250
+	1    0    0    -1  
+$EndComp
+Text Notes 15500 11050 2    50   ~ 0
+1
+$Comp
+L discipline-pcb-cache:Type-C_USB_C_GCT_USB4085 USB1
+U 1 1 5E0255FB
+P 2050 2250
+F 0 "USB1" H 1883 3287 60  0000 C CNN
+F 1 "Type-C_USB_C_GCT_USB4085" H 1883 3181 60  0000 C CNN
+F 2 "Connector_USB:USB_C_Receptacle_GCT_USB4085" H 2050 2250 60  0001 C CNN
+F 3 "" H 2050 2250 60  0001 C CNN
+	1    2050 2250
+	1    0    0    -1  
+$EndComp
+Connection ~ 2150 1500
+Wire Wire Line
+	2150 3000 2150 3100
+Connection ~ 2150 2700
+Connection ~ 2150 1800
+Connection ~ 2150 3100
+Wire Wire Line
+	2150 3100 2850 3100
+Wire Wire Line
+	2150 2900 2150 3000
+Connection ~ 2150 3000
+$Sheet
+S 4000 950  2650 2650
+U 5E019099
+F0 "usb-c" 50
+F1 "usb-c.sch" 50
+$EndSheet
+$EndSCHEMATC
