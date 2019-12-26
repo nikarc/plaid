@@ -1,3 +1,6 @@
 [submodule "Type-C.pretty"]
 	path = Type-C.pretty
 	url = https://github.com/coseyfannitutti/Type-C.pretty.git
+[submodule "SMKJP_kicad_components"]
+	path = SMKJP_kicad_components
+	url = https://github.com/hsgw/SMKJP_kicad_components.git
